@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Chunk Norris Jocks</title>
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    <body>
+        <div class="container">
+            <img src="chuck-norris-thumb.jpg" alt="Image if Chuck Norris" class="image-asset"/>
+            <h3>Chuck Norris Jocks!</h3>
+           
+                 <button onclick="showJock()">New Jock</button>  
+                 <div class="display-facts"> </div>
+        </div>
+
+        <script>
+            showJock=()=>{
+                let displayFact = document.querySelector(".display-facts")
+                let url = "https://api.chucknorris.io/jokes/random"
+                fetch(url)
+                    .then(response => {
+                        return response.json()
+                    })
+                    .then(responseData=>{
+                        console.log("response", responseData);
+                        displayFact.innerHTML = responseData.value;
+                    })
+
+
+            }   
+        </script>
+    </body>
+</html>

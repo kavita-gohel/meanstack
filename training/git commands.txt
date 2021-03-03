@@ -1,0 +1,40 @@
+git commands:
+
+git init
+
+git status
+
+git commit -m "message"
+
+git remote add  origin https://github.com/kavita-gohel/html_css-tags.git
+
+git push origin main
+
+git remote set-url origin https://github.com/kavita-gohel/html_css-tags.git
+
+git remote -v
+
+git branch
+
+git branch -r
+
+git branch main
+
+git checkout -b master(to change branch)
+
+git remote rm origin
+
+ 
+
+git config --list
+
+git pull origin main
+or git pull origin main --allow-unrelated-histories
+
+git config --global credential.username "kavita-gohel"
+
+git@github.com:kavita-gohel/html_css-tags.git
+
+Typography
+
+kavita_g6

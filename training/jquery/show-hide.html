@@ -1,0 +1,39 @@
+<html>
+   <head>
+      <title>Show/Hide Effect Example</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+		    <script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+
+            $("#show").click(function () {
+               $(".mydiv").show( 1000 );
+            });
+
+            $("#hide").click(function () {
+               $(".mydiv").hide( 1000 );
+            });
+
+            $("#toggle").click(function () {
+               $(".mydiv").toggle( 1000 );
+            });
+				
+         });
+      </script>
+		
+      <style>
+         .mydiv{ margin:10px;padding:12px; 
+            border:2px solid #666; width:100px; height:100px;}
+      </style>
+   </head>
+	
+   <body>
+      <div class = "mydiv">
+         This is a SQUARE
+      </div>
+
+      <input id = "hide" type = "button" value = "Hide" />   
+      <input id = "show" type = "button" value = "Show" />
+      <input id = "toggle" type = "button" value = "Toggle" />
+   </body>
+</html>

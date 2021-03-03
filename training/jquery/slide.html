@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+   <title>Slide Effect Example</title>
+ 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 15px;
+        background: #B0C4DE;
+    }
+</style>
+<script>
+$(document).ready(function(){
+        $(".up-btn").click(function(){
+        $("p.normal").slideUp();
+        $("p.fast").slideUp("fast");
+        $("p.slow").slideUp("slow");
+        $("p.very-fast").slideUp(50);
+        $("p.very-slow").slideUp(2000);
+    });
+    
+   
+    $(".down-btn").click(function(){
+        $("p.normal").slideDown();
+        $("p.fast").slideDown("fast");
+        $("p.slow").slideDown("slow");
+        $("p.very-fast").slideDown(50);
+        $("p.very-slow").slideDown(2000);
+    });
+
+    $(".toggle-btn").click(function(){
+        
+        $("p").slideToggle();
+       
+    });
+
+});
+</script>
+</head>
+<body>
+    <button type="button" class="up-btn">Slide Up </button> 
+    <button type="button" class="down-btn">Slide Down </button>
+    <button type="button" class="toggle-btn">Toggle(with no speed) </button>
+    <p class="very-fast">This paragraph will fade in/out with very fast speed.</p>
+    <p class="normal">This paragraph will fade in/out with default speed.</p>
+    <p class="fast">This paragraph will fade in/out with fast speed.</p>
+    <p class="slow">This paragraph will fade in/out with slow speed.</p>
+    <p class="very-slow">This paragraph will fade in/out with very slow speed.</p>
+</body>
+</html>
